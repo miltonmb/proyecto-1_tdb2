@@ -109,7 +109,35 @@ public class principal extends javax.swing.JFrame {
         jPanel8 = new javax.swing.JPanel();
         cb_eliminarHabitat = new javax.swing.JComboBox<>();
         jb_eliminarHabitat = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        JD_Dependencias = new javax.swing.JDialog();
+        jPanel9 = new javax.swing.JPanel();
+        jb_VtcrearDependenica = new javax.swing.JButton();
+        jb_VTModDependencia = new javax.swing.JButton();
+        jb_VTEliminarDependencia = new javax.swing.JButton();
+        Jd_crearDependencia = new javax.swing.JDialog();
+        jPanel10 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jt_CodigoDependencia = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        jt_NombreDependencia = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        cb_zonaDependencia = new javax.swing.JComboBox<>();
+        jb_CrearDependencia = new javax.swing.JButton();
+        jd_eliminarDependencia = new javax.swing.JDialog();
+        jPanel11 = new javax.swing.JPanel();
+        cb_eliminarDempendencia = new javax.swing.JComboBox<>();
+        jb_EliminarDependencia = new javax.swing.JButton();
+        JD_ModificarDependencia = new javax.swing.JDialog();
+        jPanel12 = new javax.swing.JPanel();
+        jt_idDependencia = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        jl_zonadependencia = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jl_codigodependencia = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jt_ModNombreDependencia = new javax.swing.JTextField();
+        jb_BuscarDependencia = new javax.swing.JButton();
+        jb_ModDepencia = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         bt_entrarPersonal = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -177,21 +205,21 @@ public class principal extends javax.swing.JFrame {
             .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        Jb_VentanaZona.setText("Crear Zona");
+        Jb_VentanaZona.setText("Zona");
         Jb_VentanaZona.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Jb_VentanaZonaActionPerformed(evt);
             }
         });
 
-        jb_VentanaHabitat.setText("CrearHabitat");
+        jb_VentanaHabitat.setText("Habitat");
         jb_VentanaHabitat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_VentanaHabitatActionPerformed(evt);
             }
         });
 
-        jb_VentanaDependencia.setText("Crear Dependencia");
+        jb_VentanaDependencia.setText("Dependencia");
         jb_VentanaDependencia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_VentanaDependenciaActionPerformed(evt);
@@ -208,7 +236,7 @@ public class principal extends javax.swing.JFrame {
                     .addComponent(Jb_VentanaZona, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jb_VentanaDependencia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jb_VentanaHabitat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -649,7 +677,258 @@ public class principal extends javax.swing.JFrame {
             .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jButton1.setText("jButton1");
+        jb_VtcrearDependenica.setText("Crear");
+        jb_VtcrearDependenica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_VtcrearDependenicaActionPerformed(evt);
+            }
+        });
+
+        jb_VTModDependencia.setText("Modificar");
+        jb_VTModDependencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_VTModDependenciaActionPerformed(evt);
+            }
+        });
+
+        jb_VTEliminarDependencia.setText("Eliminar");
+        jb_VTEliminarDependencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_VTEliminarDependenciaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(134, 134, 134)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jb_VTEliminarDependencia)
+                    .addComponent(jb_VTModDependencia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jb_VtcrearDependenica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(134, Short.MAX_VALUE))
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(63, 63, 63)
+                .addComponent(jb_VtcrearDependenica)
+                .addGap(42, 42, 42)
+                .addComponent(jb_VTModDependencia)
+                .addGap(50, 50, 50)
+                .addComponent(jb_VTEliminarDependencia)
+                .addContainerGap(58, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout JD_DependenciasLayout = new javax.swing.GroupLayout(JD_Dependencias.getContentPane());
+        JD_Dependencias.getContentPane().setLayout(JD_DependenciasLayout);
+        JD_DependenciasLayout.setHorizontalGroup(
+            JD_DependenciasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        JD_DependenciasLayout.setVerticalGroup(
+            JD_DependenciasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jLabel9.setText("CodigoDependencia");
+
+        jLabel11.setText("NombreDependencia");
+
+        jLabel13.setText("Zona");
+
+        jb_CrearDependencia.setText("Crear");
+        jb_CrearDependencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_CrearDependenciaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jb_CrearDependencia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addComponent(jLabel13)
+                        .addGap(45, 45, 45)
+                        .addComponent(cb_zonaDependencia, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel9))
+                        .addGap(37, 37, 37)
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jt_CodigoDependencia, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
+                            .addComponent(jt_NombreDependencia))))
+                .addContainerGap())
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(jt_CodigoDependencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(jt_NombreDependencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(cb_zonaDependencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addComponent(jb_CrearDependencia)
+                .addGap(43, 43, 43))
+        );
+
+        javax.swing.GroupLayout Jd_crearDependenciaLayout = new javax.swing.GroupLayout(Jd_crearDependencia.getContentPane());
+        Jd_crearDependencia.getContentPane().setLayout(Jd_crearDependenciaLayout);
+        Jd_crearDependenciaLayout.setHorizontalGroup(
+            Jd_crearDependenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        Jd_crearDependenciaLayout.setVerticalGroup(
+            Jd_crearDependenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jb_EliminarDependencia.setText("Eliminar");
+        jb_EliminarDependencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_EliminarDependenciaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(cb_eliminarDempendencia, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGap(142, 142, 142)
+                        .addComponent(jb_EliminarDependencia)))
+                .addContainerGap(90, Short.MAX_VALUE))
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(90, 90, 90)
+                .addComponent(cb_eliminarDempendencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
+                .addComponent(jb_EliminarDependencia)
+                .addGap(59, 59, 59))
+        );
+
+        javax.swing.GroupLayout jd_eliminarDependenciaLayout = new javax.swing.GroupLayout(jd_eliminarDependencia.getContentPane());
+        jd_eliminarDependencia.getContentPane().setLayout(jd_eliminarDependenciaLayout);
+        jd_eliminarDependenciaLayout.setHorizontalGroup(
+            jd_eliminarDependenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jd_eliminarDependenciaLayout.setVerticalGroup(
+            jd_eliminarDependenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jLabel14.setText("Zona");
+
+        jLabel16.setText("CodigoDependencia");
+
+        jLabel18.setText("Nombre");
+
+        jb_BuscarDependencia.setText("Buscar");
+        jb_BuscarDependencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_BuscarDependenciaActionPerformed(evt);
+            }
+        });
+
+        jb_ModDepencia.setText("Modificar");
+        jb_ModDepencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_ModDepenciaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addGap(75, 75, 75)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addComponent(jLabel16)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel12Layout.createSequentialGroup()
+                                .addComponent(jLabel14)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jl_zonadependencia, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel12Layout.createSequentialGroup()
+                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel18)
+                                    .addComponent(jt_idDependencia, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jb_BuscarDependencia, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+                                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jl_codigodependencia, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jt_ModNombreDependencia, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(3, 3, 3)))))
+                        .addContainerGap(59, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jb_ModDepencia)
+                .addGap(146, 146, 146))
+        );
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jt_idDependencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jb_BuscarDependencia))
+                .addGap(26, 26, 26)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(jl_zonadependencia, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(jl_codigodependencia, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(jt_ModNombreDependencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addComponent(jb_ModDepencia)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout JD_ModificarDependenciaLayout = new javax.swing.GroupLayout(JD_ModificarDependencia.getContentPane());
+        JD_ModificarDependencia.getContentPane().setLayout(JD_ModificarDependenciaLayout);
+        JD_ModificarDependenciaLayout.setHorizontalGroup(
+            JD_ModificarDependenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        JD_ModificarDependenciaLayout.setVerticalGroup(
+            JD_ModificarDependenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -740,6 +1019,7 @@ public class principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jb_modificarZonasActionPerformed
 
     private void jb_eliminarzonasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_eliminarzonasActionPerformed
+        cb_EliminarZona.removeAllItems();
         ComboBoxModel model = this.cb_EliminarZona.getModel();
         FindIterable<Document> iterDoc = db.getCollection("Zonas").find();
         int i = 1;
@@ -788,7 +1068,6 @@ public class principal extends javax.swing.JFrame {
             }
         } catch (Exception e) {
         }
-        cb_EliminarZona.removeAllItems();
         jd_eliminarZona.setVisible(false);
     }//GEN-LAST:event_jb_eliminarZonaActionPerformed
 
@@ -857,7 +1136,7 @@ public class principal extends javax.swing.JFrame {
             Document doc = db.getCollection("Habitat").find(query).first();
             jt_ModNombreHabitat.setText((String) doc.get("Nombre"));
             jl_codigohabitat.setText(CodZona + "");
-            jl_zonahabitat.setText( doc.get("CodigoZona")+"");
+            jl_zonahabitat.setText(doc.get("CodigoZona") + "");
             JOptionPane.showMessageDialog(this.jd_eliminarZona, "Encontrado!");
             jt_ModNombreHabitat.setEnabled(true);
             jb_ModificarHabitat.setEnabled(true);
@@ -887,7 +1166,7 @@ public class principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jb_crearhabitatActionPerformed
 
     private void jd_VentanaCrearHbitatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jd_VentanaCrearHbitatActionPerformed
-        cb_EliminarZona.removeAllItems();
+        cb_zonacrearhabitat.removeAllItems();
         ComboBoxModel model = this.cb_zonacrearhabitat.getModel();
         FindIterable<Document> iterDoc = db.getCollection("Zonas").find();
         int i = 1;
@@ -902,7 +1181,10 @@ public class principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jd_VentanaCrearHbitatActionPerformed
 
     private void jb_VentanaDependenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_VentanaDependenciaActionPerformed
-        // TODO add your handling code here:
+        this.JD_Dependencias.pack();
+        this.JD_Dependencias.setResizable(false);
+        this.JD_Dependencias.setLocationRelativeTo(this);
+        this.JD_Dependencias.setVisible(true);
     }//GEN-LAST:event_jb_VentanaDependenciaActionPerformed
 
     private void jb_VentanaHabitatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_VentanaHabitatActionPerformed
@@ -948,6 +1230,113 @@ public class principal extends javax.swing.JFrame {
         jd_EliminarHabitat.setVisible(false);
     }//GEN-LAST:event_jb_eliminarHabitatActionPerformed
 
+    private void jb_CrearDependenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_CrearDependenciaActionPerformed
+        long codigoZona = Integer.parseInt(jt_CodigoDependencia.getText());
+        String nombre = jt_NombreDependencia.getText();
+        long codigozona = Integer.parseInt(cb_zonaDependencia.getSelectedItem().toString());
+        try {
+            Document doc = new Document();
+            doc.append("CodigoDependencia", codigoZona);
+            doc.append("CodigoZona", codigozona);
+            doc.append("NombreDependencia", nombre);
+            db.getCollection("Dependencias").insertOne(doc);
+            JOptionPane.showMessageDialog(this.jd_crearzona, "Creada Exitosamente");
+            jt_CodigoDependencia.setText("");
+            jt_NombreDependencia.setText("");
+            Jd_crearDependencia.setVisible(false);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_jb_CrearDependenciaActionPerformed
+
+    private void jb_EliminarDependenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_EliminarDependenciaActionPerformed
+        int codZona = Integer.parseInt(cb_eliminarDempendencia.getSelectedItem().toString());
+        int opcion;
+        try {
+            opcion = JOptionPane.showConfirmDialog(this.jd_eliminarDependencia, "¿Desea Borrarlo?", "Borrar", YES_NO_OPTION);
+            if (opcion == 0) {
+                db.getCollection("Dependencias").deleteOne(Filters.eq("CodigoDependencia", codZona));
+                JOptionPane.showMessageDialog(this.jd_EliminarHabitat, "Eliminado!");
+            }
+        } catch (Exception e) {
+        }
+        jd_eliminarDependencia.setVisible(false);
+    }//GEN-LAST:event_jb_EliminarDependenciaActionPerformed
+
+    private void jb_BuscarDependenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_BuscarDependenciaActionPerformed
+        int CodZona;
+        try {
+            CodZona = Integer.parseInt(jt_idDependencia.getText());
+            BasicDBObject query = new BasicDBObject();
+            query.put("CodigoDependencia", CodZona);
+            Document doc = db.getCollection("Dependencias").find(query).first();
+            jt_ModNombreDependencia.setText((String) doc.get("NombreDependencia"));
+            jl_codigodependencia.setText(CodZona + "");
+            jl_zonadependencia.setText(doc.get("CodigoZona") + "");
+            JOptionPane.showMessageDialog(this.jd_eliminarZona, "Encontrado!");
+            jt_ModNombreDependencia.setEnabled(true);
+            jb_ModDepencia.setEnabled(true);
+            jt_idDependencia.setText("");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_jb_BuscarDependenciaActionPerformed
+
+    private void jb_ModDepenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_ModDepenciaActionPerformed
+        String nombre = jt_ModNombreDependencia.getText();
+        int CodZona;
+        try {
+            CodZona = Integer.parseInt(this.jl_codigodependencia.getText());
+            db.getCollection("Dependencias").updateOne(Filters.eq("CodigoDependencia", CodZona), Updates.set("NombreDependencia", nombre));
+            JOptionPane.showMessageDialog(this.jd_ModificarHabitat, "Modificado Con Exito");
+            jt_ModNombreDependencia.setEnabled(false);
+            jb_ModDepencia.setEnabled(false);
+            jt_ModNombreDependencia.setText("");
+            jl_zonadependencia.setText("");
+            jl_codigodependencia.setText("");
+            JD_ModificarDependencia.setVisible(false);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_jb_ModDepenciaActionPerformed
+
+    private void jb_VtcrearDependenicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_VtcrearDependenicaActionPerformed
+        cb_zonaDependencia.removeAllItems();
+        ComboBoxModel model = this.cb_zonaDependencia.getModel();
+        FindIterable<Document> iterDoc = db.getCollection("Zonas").find();
+        int i = 1;
+        for (Document doc : iterDoc) {
+            this.cb_zonaDependencia.addItem(doc.get("CodigoZona").toString());
+            i++;
+        }
+        this.Jd_crearDependencia.pack();
+        this.Jd_crearDependencia.setResizable(false);
+        this.Jd_crearDependencia.setLocationRelativeTo(this);
+        this.Jd_crearDependencia.setVisible(true);
+    }//GEN-LAST:event_jb_VtcrearDependenicaActionPerformed
+
+    private void jb_VTModDependenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_VTModDependenciaActionPerformed
+        this.JD_ModificarDependencia.pack();
+        this.JD_ModificarDependencia.setResizable(false);
+        this.JD_ModificarDependencia.setLocationRelativeTo(this);
+        this.JD_ModificarDependencia.setVisible(true);
+    }//GEN-LAST:event_jb_VTModDependenciaActionPerformed
+
+    private void jb_VTEliminarDependenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_VTEliminarDependenciaActionPerformed
+        cb_eliminarDempendencia.removeAllItems();
+        ComboBoxModel model = this.cb_eliminarDempendencia.getModel();
+        FindIterable<Document> iterDoc = db.getCollection("Dependencias").find();
+        int i = 1;
+        for (Document doc : iterDoc) {
+            this.cb_eliminarDempendencia.addItem(doc.get("CodigoDependencia").toString());
+            i++;
+        }
+        this.jd_eliminarDependencia.pack();
+        this.jd_eliminarDependencia.setResizable(false);
+        this.jd_eliminarDependencia.setLocationRelativeTo(this);
+        this.jd_eliminarDependencia.setVisible(true);
+    }//GEN-LAST:event_jb_VTEliminarDependenciaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -985,20 +1374,29 @@ public class principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JB_VentatnaEliminarHabitat;
+    private javax.swing.JDialog JD_Dependencias;
+    private javax.swing.JDialog JD_ModificarDependencia;
     private javax.swing.JButton Jb_VentanaZona;
     private javax.swing.JDialog Jd_CrearHabitat;
+    private javax.swing.JDialog Jd_crearDependencia;
     private javax.swing.JTextField Jt_NombreHabitat;
     private javax.swing.JDialog VentanaZoologico;
     private javax.swing.JButton bt_entrarAnimales;
     private javax.swing.JButton bt_entrarPersonal;
     private javax.swing.JButton bt_entrarZoologico;
     private javax.swing.JComboBox<String> cb_EliminarZona;
+    private javax.swing.JComboBox<String> cb_eliminarDempendencia;
     private javax.swing.JComboBox<String> cb_eliminarHabitat;
+    private javax.swing.JComboBox<String> cb_zonaDependencia;
     private javax.swing.JComboBox<String> cb_zonacrearhabitat;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1006,7 +1404,11 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -1014,12 +1416,20 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
+    private javax.swing.JButton jb_BuscarDependencia;
+    private javax.swing.JButton jb_CrearDependencia;
     private javax.swing.JButton jb_CrearZona;
+    private javax.swing.JButton jb_EliminarDependencia;
+    private javax.swing.JButton jb_ModDepencia;
     private javax.swing.JButton jb_ModificarHabitat;
     private javax.swing.JButton jb_ModificarZona;
+    private javax.swing.JButton jb_VTEliminarDependencia;
+    private javax.swing.JButton jb_VTModDependencia;
     private javax.swing.JButton jb_VentanaDependencia;
     private javax.swing.JButton jb_VentanaHabitat;
     private javax.swing.JButton jb_VentanaModificarHabitat;
+    private javax.swing.JButton jb_VtcrearDependenica;
     private javax.swing.JButton jb_buscarModificarZ;
     private javax.swing.JButton jb_buscarhabitat;
     private javax.swing.JButton jb_crearZ;
@@ -1034,10 +1444,13 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JButton jd_VentanaCrearHbitat;
     private javax.swing.JDialog jd_Zona;
     private javax.swing.JDialog jd_crearzona;
+    private javax.swing.JDialog jd_eliminarDependencia;
     private javax.swing.JDialog jd_eliminarZona;
     private javax.swing.JDialog jd_modifcarzona;
+    private javax.swing.JLabel jl_codigodependencia;
     private javax.swing.JLabel jl_codigohabitat;
     private javax.swing.JLabel jl_idModificarZ;
+    private javax.swing.JLabel jl_zonadependencia;
     private javax.swing.JLabel jl_zonahabitat;
     private javax.swing.JLabel jlzona;
     private javax.swing.JLabel jlzona1;
@@ -1045,9 +1458,13 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JLabel jlzona5;
     private javax.swing.JTextField jt_BuscarModHabitat;
     private javax.swing.JTextField jt_BuscarModificarZ;
+    private javax.swing.JTextField jt_CodigoDependencia;
     private javax.swing.JTextField jt_CodigoHabitat;
+    private javax.swing.JTextField jt_ModNombreDependencia;
     private javax.swing.JTextField jt_ModNombreHabitat;
+    private javax.swing.JTextField jt_NombreDependencia;
     private javax.swing.JTextField jt_codigozona;
+    private javax.swing.JTextField jt_idDependencia;
     private javax.swing.JTextField jt_nombreModificarZona;
     private javax.swing.JTextField jt_nombrezona;
     // End of variables declaration//GEN-END:variables
