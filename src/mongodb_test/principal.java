@@ -81,6 +81,8 @@ public class principal extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         cb_eliminarEmpleados = new javax.swing.JComboBox<>();
         bt_eliminarEmpleados = new javax.swing.JButton();
+        CrearZona = new javax.swing.JDialog();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         bt_entrarPersonal = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -323,6 +325,29 @@ public class principal extends javax.swing.JFrame {
         jd_EmpleadosLayout.setVerticalGroup(
             jd_EmpleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jTabbedPane1)
+        jButton1.setText("Crear");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout CrearZonaLayout = new javax.swing.GroupLayout(CrearZona.getContentPane());
+        CrearZona.getContentPane().setLayout(CrearZonaLayout);
+        CrearZonaLayout.setHorizontalGroup(
+            CrearZonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CrearZonaLayout.createSequentialGroup()
+                .addGap(119, 119, 119)
+                .addComponent(jButton1)
+                .addContainerGap(184, Short.MAX_VALUE))
+        );
+        CrearZonaLayout.setVerticalGroup(
+            CrearZonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CrearZonaLayout.createSequentialGroup()
+                .addContainerGap(200, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(59, 59, 59))
+
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -493,6 +518,11 @@ public class principal extends javax.swing.JFrame {
         } catch (Exception e) {
         }
     }//GEN-LAST:event_bt_eliminarEmpleadosActionPerformed
+          
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     /**
      * @param args the command line arguments
@@ -538,6 +568,11 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JButton bt_entrarZoologico;
     private javax.swing.JButton bt_modificarEmpleado;
     private javax.swing.JComboBox<String> cb_eliminarEmpleados;
+    private javax.swing.JDialog CrearZona;
+    private javax.swing.JButton bt_entrarAnimales;
+    private javax.swing.JButton bt_entrarPersonal;
+    private javax.swing.JButton bt_entrarZoologico;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
