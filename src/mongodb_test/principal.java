@@ -1,9 +1,16 @@
 package mongodb_test;
 
+import com.mongodb.BasicDBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
+import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Filters;
+import com.mongodb.client.model.Updates;
+import java.util.Iterator;
+import javax.swing.ComboBoxModel;
 import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.YES_NO_OPTION;
 import org.bson.Document;
 
 /*
@@ -23,6 +30,7 @@ public class principal extends javax.swing.JFrame {
     MongoClientURI uri;
     MongoClient client;
     MongoDatabase db;
+
     public principal() {
         uri = new MongoClientURI("mongodb://admin:admin@ds044709.mlab.com:44709/proyectoz");
         client = new MongoClient(uri);
@@ -55,8 +63,24 @@ public class principal extends javax.swing.JFrame {
         jt_sApellidoAgregarEmpleado = new javax.swing.JTextField();
         jt_cargoAgregarEmpleado = new javax.swing.JTextField();
         bt_agregarEmpleado = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jt_codModificarEmpleados = new javax.swing.JTextField();
+        bt_modificarEmpleado = new javax.swing.JButton();
+        jt_pNombreModificarEmpleado = new javax.swing.JTextField();
+        jt_sNombreModificarEmpleado = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        jt_pApellidoModificarEmpleado = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        jt_sApellidoModificarEmpleado = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        jt_cargoModificarEmpleado = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        bt_buscarModificarEmpleado = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        cb_eliminarEmpleados = new javax.swing.JComboBox<>();
+        bt_eliminarEmpleados = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         bt_entrarPersonal = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -116,7 +140,7 @@ public class principal extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jt_cargoAgregarEmpleado)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(bt_agregarEmpleado, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
+                .addComponent(bt_agregarEmpleado, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -149,36 +173,146 @@ public class principal extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel10)
                             .addComponent(jt_cargoAgregarEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Agregar Empleados", jPanel1);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 395, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 213, Short.MAX_VALUE)
-        );
+        jLabel11.setText("Codigo del empleado:");
 
-        jTabbedPane1.addTab("Modificar Empleados", jPanel2);
+        bt_modificarEmpleado.setText("Modificar");
+        bt_modificarEmpleado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_modificarEmpleadoMouseClicked(evt);
+            }
+        });
+        bt_modificarEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_modificarEmpleadoActionPerformed(evt);
+            }
+        });
+
+        jLabel12.setText("Segundo nombre:");
+
+        jLabel13.setText("Primer apellido:");
+
+        jLabel14.setText("Segundo apellido:");
+
+        jLabel15.setText("Cargo:");
+
+        jLabel16.setText("Primer nombre:");
+
+        bt_buscarModificarEmpleado.setText("Buscar");
+        bt_buscarModificarEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_buscarModificarEmpleadoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 395, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel11)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jt_codModificarEmpleados, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel16)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jt_pNombreModificarEmpleado))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel12)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jt_sNombreModificarEmpleado))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel13)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jt_pApellidoModificarEmpleado))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel14)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jt_sApellidoModificarEmpleado))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel15)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jt_cargoModificarEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bt_modificarEmpleado, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                    .addComponent(bt_buscarModificarEmpleado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 213, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(jt_codModificarEmpleados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bt_buscarModificarEmpleado))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jt_pNombreModificarEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel16))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel12)
+                            .addComponent(jt_sNombreModificarEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel13)
+                            .addComponent(jt_pApellidoModificarEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel14)
+                            .addComponent(jt_sApellidoModificarEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jt_cargoModificarEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel15)))
+                    .addComponent(bt_modificarEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25))
         );
 
-        jTabbedPane1.addTab("Eliminar Empleados", jPanel3);
+        jTabbedPane1.addTab("Modificar Empleados", jPanel3);
+
+        bt_eliminarEmpleados.setText("Eliminar");
+        bt_eliminarEmpleados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_eliminarEmpleadosActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(0, 249, Short.MAX_VALUE)
+                        .addComponent(bt_eliminarEmpleados, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cb_eliminarEmpleados, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(cb_eliminarEmpleados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 119, Short.MAX_VALUE)
+                .addComponent(bt_eliminarEmpleados, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("Eliminar Empleados", jPanel2);
 
         javax.swing.GroupLayout jd_EmpleadosLayout = new javax.swing.GroupLayout(jd_Empleados.getContentPane());
         jd_Empleados.getContentPane().setLayout(jd_EmpleadosLayout);
@@ -239,7 +373,7 @@ public class principal extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(36, 36, 36)
                         .addComponent(jLabel1)))
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -285,7 +419,7 @@ public class principal extends javax.swing.JFrame {
             doc.append("SegundoApellido", sApellido);
             doc.append("Cargo", cargo);
             db.getCollection("Empleados").insertOne(doc);
-            JOptionPane.showMessageDialog(this, "Se ha agregado");
+            JOptionPane.showMessageDialog(this.jd_Empleados, "Agregado Exitosamente!");
         } catch (Exception e) {
         }
     }//GEN-LAST:event_bt_agregarEmpleadoMouseClicked
@@ -295,7 +429,70 @@ public class principal extends javax.swing.JFrame {
         this.jd_Empleados.setLocationRelativeTo(this);
         this.jd_Empleados.pack();
         this.jd_Empleados.setVisible(true);
+        ComboBoxModel model = this.cb_eliminarEmpleados.getModel();
+        FindIterable<Document> iterDoc = db.getCollection("Empleados").find();
+        int i = 1;
+        for (Document doc : iterDoc) {
+            this.cb_eliminarEmpleados.addItem((String) doc.get("CodigoEmpleado"));
+            i++;
+        }
     }//GEN-LAST:event_bt_entrarPersonalActionPerformed
+
+    private void bt_modificarEmpleadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_modificarEmpleadoMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bt_modificarEmpleadoMouseClicked
+
+    private void bt_buscarModificarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_buscarModificarEmpleadoActionPerformed
+        String codEmpleado;
+        try {
+            codEmpleado = this.jt_codModificarEmpleados.getText();
+            BasicDBObject query = new BasicDBObject();
+            query.put("CodigoEmpleado", codEmpleado);
+            System.out.println();
+            Document doc = db.getCollection("Empleados").find(query).first();
+            this.jt_pNombreModificarEmpleado.setText((String) doc.get("PrimerNombre"));
+            this.jt_sNombreModificarEmpleado.setText((String) doc.get("SegundoNombre"));
+            this.jt_pApellidoModificarEmpleado.setText((String) doc.get("PrimerApellido"));
+            this.jt_sApellidoModificarEmpleado.setText((String) doc.get("SegundoApellido"));
+            this.jt_cargoModificarEmpleado.setText((String) doc.get("Cargo"));
+            JOptionPane.showMessageDialog(this.jd_Empleados, "Encontrado!");
+        } catch (Exception e) {
+
+        }
+    }//GEN-LAST:event_bt_buscarModificarEmpleadoActionPerformed
+
+    private void bt_modificarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_modificarEmpleadoActionPerformed
+        String codEmpleado = this.jt_codModificarEmpleados.getText();
+        String pNombre, sNombre, pApellido, sApellido, cargo;
+        try {
+            pNombre = this.jt_pNombreModificarEmpleado.getText();
+            sNombre = this.jt_sNombreModificarEmpleado.getText();
+            pApellido = this.jt_pApellidoModificarEmpleado.getText();
+            sApellido = this.jt_sApellidoModificarEmpleado.getText();
+            cargo = this.jt_cargoModificarEmpleado.getText();
+            db.getCollection("Empleados").updateOne(Filters.eq("CodigoEmpleado", codEmpleado), Updates.set("PrimerNombre", pNombre));
+            db.getCollection("Empleados").updateOne(Filters.eq("CodigoEmpleado", codEmpleado), Updates.set("SegundoNombre", sNombre));
+            db.getCollection("Empleados").updateOne(Filters.eq("CodigoEmpleado", codEmpleado), Updates.set("PrimerApellido", pApellido));
+            db.getCollection("Empleados").updateOne(Filters.eq("CodigoEmpleado", codEmpleado), Updates.set("SegundoApellido", sApellido));
+            db.getCollection("Empleados").updateOne(Filters.eq("CodigoEmpleado", codEmpleado), Updates.set("Cargo", cargo));
+            JOptionPane.showMessageDialog(this.jd_Empleados, "Modificado Exitosamente!");
+        } catch (Exception e) {
+
+        }
+    }//GEN-LAST:event_bt_modificarEmpleadoActionPerformed
+
+    private void bt_eliminarEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_eliminarEmpleadosActionPerformed
+        String codEmpleado = this.cb_eliminarEmpleados.getSelectedItem().toString();
+        int opcion;
+        try {
+            opcion = JOptionPane.showConfirmDialog(this.jd_Empleados, "¿Desea Borrarlo?", "Borrar", YES_NO_OPTION);
+            if (opcion == 0) {
+                db.getCollection("Empleados").deleteOne(Filters.eq("CodigoEmpleado", codEmpleado));
+                JOptionPane.showMessageDialog(this.jd_Empleados, "Eliminado!");
+            }
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_bt_eliminarEmpleadosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -308,7 +505,7 @@ public class principal extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -334,11 +531,21 @@ public class principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bt_agregarEmpleado;
+    private javax.swing.JButton bt_buscarModificarEmpleado;
+    private javax.swing.JButton bt_eliminarEmpleados;
     private javax.swing.JButton bt_entrarAnimales;
     private javax.swing.JButton bt_entrarPersonal;
     private javax.swing.JButton bt_entrarZoologico;
+    private javax.swing.JButton bt_modificarEmpleado;
+    private javax.swing.JComboBox<String> cb_eliminarEmpleados;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -353,10 +560,16 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JDialog jd_Empleados;
     private javax.swing.JTextField jt_cargoAgregarEmpleado;
+    private javax.swing.JTextField jt_cargoModificarEmpleado;
     private javax.swing.JTextField jt_codAgregarEmpleados;
+    private javax.swing.JTextField jt_codModificarEmpleados;
     private javax.swing.JTextField jt_pApellidoAgregarEmpleado;
+    private javax.swing.JTextField jt_pApellidoModificarEmpleado;
     private javax.swing.JTextField jt_pNombreAgregarEmpleado;
+    private javax.swing.JTextField jt_pNombreModificarEmpleado;
     private javax.swing.JTextField jt_sApellidoAgregarEmpleado;
+    private javax.swing.JTextField jt_sApellidoModificarEmpleado;
     private javax.swing.JTextField jt_sNombreAgregarEmpleado;
+    private javax.swing.JTextField jt_sNombreModificarEmpleado;
     // End of variables declaration//GEN-END:variables
 }
