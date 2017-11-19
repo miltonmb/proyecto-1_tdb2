@@ -61,7 +61,6 @@ public class principal extends javax.swing.JFrame {
         Jb_VentanaZona = new javax.swing.JButton();
         jb_VentanaHabitat = new javax.swing.JButton();
         jb_VentanaDependencia = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jd_eliminarZona = new javax.swing.JDialog();
         jPanel4 = new javax.swing.JPanel();
         cb_EliminarZona = new javax.swing.JComboBox<>();
@@ -82,6 +81,35 @@ public class principal extends javax.swing.JFrame {
         jt_codigozona = new javax.swing.JTextField();
         jt_nombrezona = new javax.swing.JTextField();
         jb_crearZ = new javax.swing.JButton();
+        jd_Habitats = new javax.swing.JDialog();
+        jPanel6 = new javax.swing.JPanel();
+        jd_VentanaCrearHbitat = new javax.swing.JButton();
+        JB_VentatnaEliminarHabitat = new javax.swing.JButton();
+        jb_VentanaModificarHabitat = new javax.swing.JButton();
+        Jd_CrearHabitat = new javax.swing.JDialog();
+        jPanel7 = new javax.swing.JPanel();
+        cb_zonacrearhabitat = new javax.swing.JComboBox<>();
+        jt_CodigoHabitat = new javax.swing.JTextField();
+        Jt_NombreHabitat = new javax.swing.JTextField();
+        jb_crearhabitat = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jd_ModificarHabitat = new javax.swing.JDialog();
+        jb_buscarhabitat = new javax.swing.JButton();
+        jt_BuscarModHabitat = new javax.swing.JTextField();
+        jb_ModificarHabitat = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jt_ModNombreHabitat = new javax.swing.JTextField();
+        jl_codigohabitat = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jl_zonahabitat = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jd_EliminarHabitat = new javax.swing.JDialog();
+        jPanel8 = new javax.swing.JPanel();
+        cb_eliminarHabitat = new javax.swing.JComboBox<>();
+        jb_eliminarHabitat = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         bt_entrarPersonal = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -157,8 +185,18 @@ public class principal extends javax.swing.JFrame {
         });
 
         jb_VentanaHabitat.setText("CrearHabitat");
+        jb_VentanaHabitat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_VentanaHabitatActionPerformed(evt);
+            }
+        });
 
         jb_VentanaDependencia.setText("Crear Dependencia");
+        jb_VentanaDependencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_VentanaDependenciaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -170,7 +208,7 @@ public class principal extends javax.swing.JFrame {
                     .addComponent(Jb_VentanaZona, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jb_VentanaDependencia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jb_VentanaHabitat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(184, Short.MAX_VALUE))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -194,8 +232,6 @@ public class principal extends javax.swing.JFrame {
             VentanaZoologicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-
-        jButton3.setText("jButton3");
 
         jb_eliminarZona.setText("Eliminar");
         jb_eliminarZona.addActionListener(new java.awt.event.ActionListener() {
@@ -377,6 +413,244 @@ public class principal extends javax.swing.JFrame {
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        jd_VentanaCrearHbitat.setText("Crear");
+        jd_VentanaCrearHbitat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jd_VentanaCrearHbitatActionPerformed(evt);
+            }
+        });
+
+        JB_VentatnaEliminarHabitat.setText("Eliminar");
+        JB_VentatnaEliminarHabitat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JB_VentatnaEliminarHabitatActionPerformed(evt);
+            }
+        });
+
+        jb_VentanaModificarHabitat.setText("Modificar");
+        jb_VentanaModificarHabitat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_VentanaModificarHabitatActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(123, 123, 123)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JB_VentatnaEliminarHabitat, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jb_VentanaModificarHabitat, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
+                        .addComponent(jd_VentanaCrearHbitat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(88, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addComponent(jd_VentanaCrearHbitat)
+                .addGap(42, 42, 42)
+                .addComponent(jb_VentanaModificarHabitat)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addComponent(JB_VentatnaEliminarHabitat)
+                .addGap(81, 81, 81))
+        );
+
+        javax.swing.GroupLayout jd_HabitatsLayout = new javax.swing.GroupLayout(jd_Habitats.getContentPane());
+        jd_Habitats.getContentPane().setLayout(jd_HabitatsLayout);
+        jd_HabitatsLayout.setHorizontalGroup(
+            jd_HabitatsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jd_HabitatsLayout.setVerticalGroup(
+            jd_HabitatsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jb_crearhabitat.setText("Crear");
+        jb_crearhabitat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_crearhabitatActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setText("Zona");
+
+        jLabel6.setText("CodigoHabitat");
+
+        jLabel7.setText("Nombre:");
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel7))
+                        .addGap(29, 29, 29)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(cb_zonacrearhabitat, 0, 173, Short.MAX_VALUE)
+                            .addComponent(Jt_NombreHabitat)
+                            .addComponent(jt_CodigoHabitat)))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(82, 82, 82)
+                        .addComponent(jb_crearhabitat, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(32, Short.MAX_VALUE))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cb_zonacrearhabitat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addGap(40, 40, 40)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jt_CodigoHabitat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Jt_NombreHabitat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
+                .addGap(49, 49, 49)
+                .addComponent(jb_crearhabitat)
+                .addGap(36, 36, 36))
+        );
+
+        javax.swing.GroupLayout Jd_CrearHabitatLayout = new javax.swing.GroupLayout(Jd_CrearHabitat.getContentPane());
+        Jd_CrearHabitat.getContentPane().setLayout(Jd_CrearHabitatLayout);
+        Jd_CrearHabitatLayout.setHorizontalGroup(
+            Jd_CrearHabitatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        Jd_CrearHabitatLayout.setVerticalGroup(
+            Jd_CrearHabitatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jb_buscarhabitat.setText("Buscar");
+        jb_buscarhabitat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_buscarhabitatActionPerformed(evt);
+            }
+        });
+
+        jb_ModificarHabitat.setText("Modificar");
+        jb_ModificarHabitat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_ModificarHabitatActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setText("CodigoHabitat");
+
+        jLabel10.setText("Zona");
+
+        jLabel12.setText("Nombre");
+
+        javax.swing.GroupLayout jd_ModificarHabitatLayout = new javax.swing.GroupLayout(jd_ModificarHabitat.getContentPane());
+        jd_ModificarHabitat.getContentPane().setLayout(jd_ModificarHabitatLayout);
+        jd_ModificarHabitatLayout.setHorizontalGroup(
+            jd_ModificarHabitatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_ModificarHabitatLayout.createSequentialGroup()
+                .addGap(144, 144, 144)
+                .addComponent(jb_ModificarHabitat)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jd_ModificarHabitatLayout.createSequentialGroup()
+                .addGap(71, 71, 71)
+                .addGroup(jd_ModificarHabitatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_ModificarHabitatLayout.createSequentialGroup()
+                        .addComponent(jLabel10)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jd_ModificarHabitatLayout.createSequentialGroup()
+                        .addGroup(jd_ModificarHabitatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel12)
+                            .addComponent(jt_BuscarModHabitat))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
+                        .addGroup(jd_ModificarHabitatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jb_buscarhabitat)
+                            .addGroup(jd_ModificarHabitatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jl_zonahabitat, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jl_codigohabitat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jt_ModNombreHabitat, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)))
+                        .addGap(76, 76, 76))))
+        );
+        jd_ModificarHabitatLayout.setVerticalGroup(
+            jd_ModificarHabitatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_ModificarHabitatLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(jd_ModificarHabitatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jb_buscarhabitat)
+                    .addComponent(jt_BuscarModHabitat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(63, 63, 63)
+                .addGroup(jd_ModificarHabitatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_ModificarHabitatLayout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addGap(0, 6, Short.MAX_VALUE))
+                    .addComponent(jl_codigohabitat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jd_ModificarHabitatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel10)
+                    .addComponent(jl_zonahabitat, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(19, 19, 19)
+                .addGroup(jd_ModificarHabitatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jt_ModNombreHabitat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel12))
+                .addGap(30, 30, 30)
+                .addComponent(jb_ModificarHabitat)
+                .addGap(29, 29, 29))
+        );
+
+        jb_eliminarHabitat.setText("Eliminar");
+        jb_eliminarHabitat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_eliminarHabitatActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(122, 122, 122)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(cb_eliminarHabitat, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jb_eliminarHabitat, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE))
+                .addContainerGap(102, Short.MAX_VALUE))
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(95, 95, 95)
+                .addComponent(cb_eliminarHabitat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
+                .addComponent(jb_eliminarHabitat)
+                .addGap(51, 51, 51))
+        );
+
+        javax.swing.GroupLayout jd_EliminarHabitatLayout = new javax.swing.GroupLayout(jd_EliminarHabitat.getContentPane());
+        jd_EliminarHabitat.getContentPane().setLayout(jd_EliminarHabitatLayout);
+        jd_EliminarHabitatLayout.setHorizontalGroup(
+            jd_EliminarHabitatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jd_EliminarHabitatLayout.setVerticalGroup(
+            jd_EliminarHabitatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jButton1.setText("jButton1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -497,10 +771,10 @@ public class principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jb_crearZActionPerformed
 
     private void bt_entrarZoologicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_entrarZoologicoActionPerformed
-        this.jd_Zona.pack();
-        this.jd_Zona.setResizable(false);
-        this.jd_Zona.setLocationRelativeTo(this);
-        this.jd_Zona.setVisible(true);
+        this.VentanaZoologico.pack();
+        this.VentanaZoologico.setResizable(false);
+        this.VentanaZoologico.setLocationRelativeTo(this);
+        this.VentanaZoologico.setVisible(true);
     }//GEN-LAST:event_bt_entrarZoologicoActionPerformed
 
     private void jb_eliminarZonaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_eliminarZonaActionPerformed
@@ -556,6 +830,124 @@ public class principal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jb_ModificarZonaActionPerformed
 
+    private void jb_ModificarHabitatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_ModificarHabitatActionPerformed
+        String nombre = jt_ModNombreHabitat.getText();
+        int CodZona;
+        try {
+            CodZona = Integer.parseInt(this.jl_codigohabitat.getText());
+            db.getCollection("Habitat").updateOne(Filters.eq("CodigoHabitat", CodZona), Updates.set("Nombre", nombre));
+            JOptionPane.showMessageDialog(this.jd_ModificarHabitat, "Modificado Con Exito");
+            jt_ModNombreHabitat.setEnabled(false);
+            jb_ModificarHabitat.setEnabled(false);
+            jt_ModNombreHabitat.setText("");
+            jl_codigohabitat.setText("");
+            jl_zonahabitat.setText("");
+            jd_ModificarHabitat.setVisible(false);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_jb_ModificarHabitatActionPerformed
+
+    private void jb_buscarhabitatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_buscarhabitatActionPerformed
+        int CodZona;
+        try {
+            CodZona = Integer.parseInt(jt_BuscarModHabitat.getText());
+            BasicDBObject query = new BasicDBObject();
+            query.put("CodigoHabitat", CodZona);
+            Document doc = db.getCollection("Habitat").find(query).first();
+            jt_ModNombreHabitat.setText((String) doc.get("Nombre"));
+            jl_codigohabitat.setText(CodZona + "");
+            jl_zonahabitat.setText( doc.get("CodigoZona")+"");
+            JOptionPane.showMessageDialog(this.jd_eliminarZona, "Encontrado!");
+            jt_ModNombreHabitat.setEnabled(true);
+            jb_ModificarHabitat.setEnabled(true);
+            jt_BuscarModHabitat.setText("");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_jb_buscarhabitatActionPerformed
+
+    private void jb_crearhabitatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_crearhabitatActionPerformed
+        long codigoZona = Integer.parseInt(jt_CodigoHabitat.getText());
+        String nombre = Jt_NombreHabitat.getText();
+        long codigozona = Integer.parseInt(cb_zonacrearhabitat.getSelectedItem().toString());
+        try {
+            Document doc = new Document();
+            doc.append("CodigoHabitat", codigoZona);
+            doc.append("CodigoZona", codigozona);
+            doc.append("Nombre", nombre);
+            db.getCollection("Habitat").insertOne(doc);
+            JOptionPane.showMessageDialog(this.jd_crearzona, "Creada Exitosamente");
+            jt_CodigoHabitat.setText("");
+            Jt_NombreHabitat.setText("");
+            Jd_CrearHabitat.setVisible(false);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_jb_crearhabitatActionPerformed
+
+    private void jd_VentanaCrearHbitatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jd_VentanaCrearHbitatActionPerformed
+        cb_EliminarZona.removeAllItems();
+        ComboBoxModel model = this.cb_zonacrearhabitat.getModel();
+        FindIterable<Document> iterDoc = db.getCollection("Zonas").find();
+        int i = 1;
+        for (Document doc : iterDoc) {
+            this.cb_zonacrearhabitat.addItem(doc.get("CodigoZona").toString());
+            i++;
+        }
+        this.Jd_CrearHabitat.pack();
+        this.Jd_CrearHabitat.setResizable(false);
+        this.Jd_CrearHabitat.setLocationRelativeTo(this);
+        this.Jd_CrearHabitat.setVisible(true);
+    }//GEN-LAST:event_jd_VentanaCrearHbitatActionPerformed
+
+    private void jb_VentanaDependenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_VentanaDependenciaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jb_VentanaDependenciaActionPerformed
+
+    private void jb_VentanaHabitatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_VentanaHabitatActionPerformed
+        this.jd_Habitats.pack();
+        this.jd_Habitats.setResizable(false);
+        this.jd_Habitats.setLocationRelativeTo(this);
+        this.jd_Habitats.setVisible(true);
+    }//GEN-LAST:event_jb_VentanaHabitatActionPerformed
+
+    private void jb_VentanaModificarHabitatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_VentanaModificarHabitatActionPerformed
+        this.jd_ModificarHabitat.pack();
+        this.jd_ModificarHabitat.setResizable(false);
+        this.jd_ModificarHabitat.setLocationRelativeTo(this);
+        this.jd_ModificarHabitat.setVisible(true);
+    }//GEN-LAST:event_jb_VentanaModificarHabitatActionPerformed
+
+    private void JB_VentatnaEliminarHabitatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JB_VentatnaEliminarHabitatActionPerformed
+        cb_eliminarHabitat.removeAllItems();
+        ComboBoxModel model = this.cb_eliminarHabitat.getModel();
+        FindIterable<Document> iterDoc = db.getCollection("Habitat").find();
+        int i = 1;
+        for (Document doc : iterDoc) {
+            this.cb_eliminarHabitat.addItem(doc.get("CodigoHabitat").toString());
+            i++;
+        }
+        this.jd_EliminarHabitat.pack();
+        this.jd_EliminarHabitat.setResizable(false);
+        this.jd_EliminarHabitat.setLocationRelativeTo(this);
+        this.jd_EliminarHabitat.setVisible(true);
+    }//GEN-LAST:event_JB_VentatnaEliminarHabitatActionPerformed
+
+    private void jb_eliminarHabitatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_eliminarHabitatActionPerformed
+        int codZona = Integer.parseInt(cb_eliminarHabitat.getSelectedItem().toString());
+        int opcion;
+        try {
+            opcion = JOptionPane.showConfirmDialog(this.jd_EliminarHabitat, "¿Desea Borrarlo?", "Borrar", YES_NO_OPTION);
+            if (opcion == 0) {
+                db.getCollection("Habitat").deleteOne(Filters.eq("CodigoHabitat", codZona));
+                JOptionPane.showMessageDialog(this.jd_EliminarHabitat, "Eliminado!");
+            }
+        } catch (Exception e) {
+        }
+        jd_EliminarHabitat.setVisible(false);
+    }//GEN-LAST:event_jb_eliminarHabitatActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -592,41 +984,69 @@ public class principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton JB_VentatnaEliminarHabitat;
     private javax.swing.JButton Jb_VentanaZona;
+    private javax.swing.JDialog Jd_CrearHabitat;
+    private javax.swing.JTextField Jt_NombreHabitat;
     private javax.swing.JDialog VentanaZoologico;
     private javax.swing.JButton bt_entrarAnimales;
     private javax.swing.JButton bt_entrarPersonal;
     private javax.swing.JButton bt_entrarZoologico;
     private javax.swing.JComboBox<String> cb_EliminarZona;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JComboBox<String> cb_eliminarHabitat;
+    private javax.swing.JComboBox<String> cb_zonacrearhabitat;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JButton jb_CrearZona;
+    private javax.swing.JButton jb_ModificarHabitat;
     private javax.swing.JButton jb_ModificarZona;
     private javax.swing.JButton jb_VentanaDependencia;
     private javax.swing.JButton jb_VentanaHabitat;
+    private javax.swing.JButton jb_VentanaModificarHabitat;
     private javax.swing.JButton jb_buscarModificarZ;
+    private javax.swing.JButton jb_buscarhabitat;
     private javax.swing.JButton jb_crearZ;
+    private javax.swing.JButton jb_crearhabitat;
+    private javax.swing.JButton jb_eliminarHabitat;
     private javax.swing.JButton jb_eliminarZona;
     private javax.swing.JButton jb_eliminarzonas;
     private javax.swing.JButton jb_modificarZonas;
+    private javax.swing.JDialog jd_EliminarHabitat;
+    private javax.swing.JDialog jd_Habitats;
+    private javax.swing.JDialog jd_ModificarHabitat;
+    private javax.swing.JButton jd_VentanaCrearHbitat;
     private javax.swing.JDialog jd_Zona;
     private javax.swing.JDialog jd_crearzona;
     private javax.swing.JDialog jd_eliminarZona;
     private javax.swing.JDialog jd_modifcarzona;
+    private javax.swing.JLabel jl_codigohabitat;
     private javax.swing.JLabel jl_idModificarZ;
+    private javax.swing.JLabel jl_zonahabitat;
     private javax.swing.JLabel jlzona;
     private javax.swing.JLabel jlzona1;
     private javax.swing.JLabel jlzona3;
     private javax.swing.JLabel jlzona5;
+    private javax.swing.JTextField jt_BuscarModHabitat;
     private javax.swing.JTextField jt_BuscarModificarZ;
+    private javax.swing.JTextField jt_CodigoHabitat;
+    private javax.swing.JTextField jt_ModNombreHabitat;
     private javax.swing.JTextField jt_codigozona;
     private javax.swing.JTextField jt_nombreModificarZona;
     private javax.swing.JTextField jt_nombrezona;
