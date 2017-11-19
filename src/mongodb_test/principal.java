@@ -92,19 +92,19 @@ public class principal extends javax.swing.JFrame {
         jt_CodigoHabitat = new javax.swing.JTextField();
         Jt_NombreHabitat = new javax.swing.JTextField();
         jb_crearhabitat = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        jlzona8 = new javax.swing.JLabel();
+        jlzona9 = new javax.swing.JLabel();
+        jlzona10 = new javax.swing.JLabel();
         jd_ModificarHabitat = new javax.swing.JDialog();
         jb_buscarhabitat = new javax.swing.JButton();
         jt_BuscarModHabitat = new javax.swing.JTextField();
         jb_ModificarHabitat = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
+        jlzona11 = new javax.swing.JLabel();
         jt_ModNombreHabitat = new javax.swing.JTextField();
         jl_codigohabitat = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        jlzona12 = new javax.swing.JLabel();
         jl_zonahabitat = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        jlzona13 = new javax.swing.JLabel();
         jd_EliminarHabitat = new javax.swing.JDialog();
         jPanel8 = new javax.swing.JPanel();
         cb_eliminarHabitat = new javax.swing.JComboBox<>();
@@ -116,11 +116,11 @@ public class principal extends javax.swing.JFrame {
         jb_VTEliminarDependencia = new javax.swing.JButton();
         Jd_crearDependencia = new javax.swing.JDialog();
         jPanel10 = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
+        jldep = new javax.swing.JLabel();
         jt_CodigoDependencia = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
+        jldep1 = new javax.swing.JLabel();
         jt_NombreDependencia = new javax.swing.JTextField();
-        jLabel13 = new javax.swing.JLabel();
+        jldep2 = new javax.swing.JLabel();
         cb_zonaDependencia = new javax.swing.JComboBox<>();
         jb_CrearDependencia = new javax.swing.JButton();
         jd_eliminarDependencia = new javax.swing.JDialog();
@@ -130,11 +130,11 @@ public class principal extends javax.swing.JFrame {
         JD_ModificarDependencia = new javax.swing.JDialog();
         jPanel12 = new javax.swing.JPanel();
         jt_idDependencia = new javax.swing.JTextField();
-        jLabel14 = new javax.swing.JLabel();
+        jldep3 = new javax.swing.JLabel();
         jl_zonadependencia = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
+        jldep4 = new javax.swing.JLabel();
         jl_codigodependencia = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
+        jldep5 = new javax.swing.JLabel();
         jt_ModNombreDependencia = new javax.swing.JTextField();
         jb_BuscarDependencia = new javax.swing.JButton();
         jb_ModDepencia = new javax.swing.JButton();
@@ -505,11 +505,11 @@ public class principal extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setText("Zona");
+        jlzona8.setText("Zona");
 
-        jLabel6.setText("CodigoHabitat");
+        jlzona9.setText("CodigoHabitat");
 
-        jLabel7.setText("Nombre:");
+        jlzona10.setText("Nombre:");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -520,9 +520,9 @@ public class principal extends javax.swing.JFrame {
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel7))
+                            .addComponent(jlzona8)
+                            .addComponent(jlzona9)
+                            .addComponent(jlzona10))
                         .addGap(29, 29, 29)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(cb_zonacrearhabitat, 0, 173, Short.MAX_VALUE)
@@ -539,15 +539,15 @@ public class principal extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cb_zonacrearhabitat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
+                    .addComponent(jlzona8))
                 .addGap(40, 40, 40)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jt_CodigoHabitat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
+                    .addComponent(jlzona9))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Jt_NombreHabitat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
+                    .addComponent(jlzona10))
                 .addGap(49, 49, 49)
                 .addComponent(jb_crearhabitat)
                 .addGap(36, 36, 36))
@@ -578,11 +578,11 @@ public class principal extends javax.swing.JFrame {
             }
         });
 
-        jLabel8.setText("CodigoHabitat");
+        jlzona11.setText("CodigoHabitat");
 
-        jLabel10.setText("Zona");
+        jlzona12.setText("Zona");
 
-        jLabel12.setText("Nombre");
+        jlzona13.setText("Nombre");
 
         javax.swing.GroupLayout jd_ModificarHabitatLayout = new javax.swing.GroupLayout(jd_ModificarHabitat.getContentPane());
         jd_ModificarHabitat.getContentPane().setLayout(jd_ModificarHabitatLayout);
@@ -596,12 +596,12 @@ public class principal extends javax.swing.JFrame {
                 .addGap(71, 71, 71)
                 .addGroup(jd_ModificarHabitatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jd_ModificarHabitatLayout.createSequentialGroup()
-                        .addComponent(jLabel10)
+                        .addComponent(jlzona12)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jd_ModificarHabitatLayout.createSequentialGroup()
                         .addGroup(jd_ModificarHabitatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel12)
+                            .addComponent(jlzona11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jlzona13)
                             .addComponent(jt_BuscarModHabitat))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
                         .addGroup(jd_ModificarHabitatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -622,17 +622,17 @@ public class principal extends javax.swing.JFrame {
                 .addGap(63, 63, 63)
                 .addGroup(jd_ModificarHabitatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jd_ModificarHabitatLayout.createSequentialGroup()
-                        .addComponent(jLabel8)
+                        .addComponent(jlzona11)
                         .addGap(0, 6, Short.MAX_VALUE))
                     .addComponent(jl_codigohabitat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jd_ModificarHabitatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel10)
+                    .addComponent(jlzona12)
                     .addComponent(jl_zonahabitat, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(19, 19, 19)
                 .addGroup(jd_ModificarHabitatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jt_ModNombreHabitat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel12))
+                    .addComponent(jlzona13))
                 .addGap(30, 30, 30)
                 .addComponent(jb_ModificarHabitat)
                 .addGap(29, 29, 29))
@@ -733,11 +733,11 @@ public class principal extends javax.swing.JFrame {
             .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jLabel9.setText("CodigoDependencia");
+        jldep.setText("CodigoDependencia");
 
-        jLabel11.setText("NombreDependencia");
+        jldep1.setText("NombreDependencia");
 
-        jLabel13.setText("Zona");
+        jldep2.setText("Zona");
 
         jb_CrearDependencia.setText("Crear");
         jb_CrearDependencia.addActionListener(new java.awt.event.ActionListener() {
@@ -755,13 +755,13 @@ public class principal extends javax.swing.JFrame {
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jb_CrearDependencia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addComponent(jLabel13)
+                        .addComponent(jldep2)
                         .addGap(45, 45, 45)
                         .addComponent(cb_zonaDependencia, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel10Layout.createSequentialGroup()
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel11)
-                            .addComponent(jLabel9))
+                            .addComponent(jldep1)
+                            .addComponent(jldep))
                         .addGap(37, 37, 37)
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jt_CodigoDependencia, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
@@ -773,15 +773,15 @@ public class principal extends javax.swing.JFrame {
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
+                    .addComponent(jldep)
                     .addComponent(jt_CodigoDependencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(24, 24, 24)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
+                    .addComponent(jldep1)
                     .addComponent(jt_NombreDependencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13)
+                    .addComponent(jldep2)
                     .addComponent(cb_zonaDependencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                 .addComponent(jb_CrearDependencia)
@@ -841,11 +841,11 @@ public class principal extends javax.swing.JFrame {
             .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jLabel14.setText("Zona");
+        jldep3.setText("Zona");
 
-        jLabel16.setText("CodigoDependencia");
+        jldep4.setText("CodigoDependencia");
 
-        jLabel18.setText("Nombre");
+        jldep5.setText("Nombre");
 
         jb_BuscarDependencia.setText("Buscar");
         jb_BuscarDependencia.addActionListener(new java.awt.event.ActionListener() {
@@ -869,17 +869,17 @@ public class principal extends javax.swing.JFrame {
                 .addGap(75, 75, 75)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addComponent(jLabel16)
+                        .addComponent(jldep4)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel12Layout.createSequentialGroup()
                         .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel12Layout.createSequentialGroup()
-                                .addComponent(jLabel14)
+                                .addComponent(jldep3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jl_zonadependencia, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel12Layout.createSequentialGroup()
                                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel18)
+                                    .addComponent(jldep5)
                                     .addComponent(jt_idDependencia, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -903,16 +903,18 @@ public class principal extends javax.swing.JFrame {
                     .addComponent(jt_idDependencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jb_BuscarDependencia))
                 .addGap(26, 26, 26)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel14)
-                    .addComponent(jl_zonadependencia, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jl_zonadependencia, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jldep3)))
                 .addGap(33, 33, 33)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel16)
-                    .addComponent(jl_codigodependencia, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jl_codigodependencia, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jldep4)))
                 .addGap(31, 31, 31)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel18)
+                    .addComponent(jldep5)
                     .addComponent(jt_ModNombreDependencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addComponent(jb_ModDepencia)
@@ -1390,21 +1392,9 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cb_zonaDependencia;
     private javax.swing.JComboBox<String> cb_zonacrearhabitat;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -1452,10 +1442,22 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JLabel jl_idModificarZ;
     private javax.swing.JLabel jl_zonadependencia;
     private javax.swing.JLabel jl_zonahabitat;
+    private javax.swing.JLabel jldep;
+    private javax.swing.JLabel jldep1;
+    private javax.swing.JLabel jldep2;
+    private javax.swing.JLabel jldep3;
+    private javax.swing.JLabel jldep4;
+    private javax.swing.JLabel jldep5;
     private javax.swing.JLabel jlzona;
     private javax.swing.JLabel jlzona1;
+    private javax.swing.JLabel jlzona10;
+    private javax.swing.JLabel jlzona11;
+    private javax.swing.JLabel jlzona12;
+    private javax.swing.JLabel jlzona13;
     private javax.swing.JLabel jlzona3;
     private javax.swing.JLabel jlzona5;
+    private javax.swing.JLabel jlzona8;
+    private javax.swing.JLabel jlzona9;
     private javax.swing.JTextField jt_BuscarModHabitat;
     private javax.swing.JTextField jt_BuscarModificarZ;
     private javax.swing.JTextField jt_CodigoDependencia;
