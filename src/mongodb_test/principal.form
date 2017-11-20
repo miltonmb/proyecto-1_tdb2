@@ -41,21 +41,17 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="tf_addAnimal_madre" max="32767" attributes="0"/>
+                                              <Component id="tf_addAnimal_madre" min="-2" pref="141" max="-2" attributes="0"/>
                                           </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                              <Component id="cb_addAnimal_pais" min="-2" pref="204" max="-2" attributes="0"/>
-                                          </Group>
+                                          <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="tf_addAnimal_veterinario" max="32767" attributes="0"/>
+                                              <Component id="tf_addAnimal_veterinario" min="-2" pref="43" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -83,13 +79,17 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="tf_addAnimal_nombre" min="-2" pref="201" max="-2" attributes="0"/>
-                                                  <Component id="tf_addAnimal_especie" min="-2" pref="202" max="-2" attributes="0"/>
+                                              <Component id="tf_addAnimal_especie" min="-2" pref="42" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="tf_addAnimal_nombre" max="32767" attributes="0"/>
+                                                  <Component id="tf_addAnimal_pais" pref="179" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
                                               <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
@@ -102,7 +102,8 @@
                                               <Group type="102" alignment="1" attributes="0">
                                                   <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="tf_addAnimal_subEspecie" min="-2" pref="181" max="-2" attributes="0"/>
+                                                  <Component id="tf_addAnimal_subEspecie" min="-2" pref="47" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="1" attributes="0">
                                                   <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
@@ -135,19 +136,21 @@
                               <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="tf_addAnimal_nombre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="cb_addAnimal_continente" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cb_addAnimal_continente" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="tf_addAnimal_nombre" min="-2" pref="20" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="cb_addAnimal_pais" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="rb_addAnimal_si" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="rb_addAnimal_no" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="tf_addAnimal_pais" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -173,14 +176,14 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel5">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Especie"/>
+                    <Property name="text" type="java.lang.String" value="Cod Especie"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tf_addAnimal_especie">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel6">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Sub Especie"/>
+                    <Property name="text" type="java.lang.String" value="Cod Sub Especie"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tf_addAnimal_subEspecie">
@@ -221,6 +224,9 @@
                       </StringArray>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="cb_addAnimal_continenteItemStateChanged"/>
+                  </Events>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
@@ -229,18 +235,6 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Pais"/>
                   </Properties>
-                </Component>
-                <Component class="javax.swing.JComboBox" name="cb_addAnimal_pais">
-                  <Properties>
-                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="1">
-                        <StringItem index="0" value="honduras"/>
-                      </StringArray>
-                    </Property>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel11">
                   <Properties>
@@ -291,7 +285,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel15">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Veterinario"/>
+                    <Property name="text" type="java.lang.String" value="Cod Veterinario"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tf_addAnimal_veterinario">
@@ -303,6 +297,8 @@
                   <Events>
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="addAnimalMouseClicked"/>
                   </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="tf_addAnimal_pais">
                 </Component>
               </SubComponents>
             </Container>
@@ -359,7 +355,7 @@
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jScrollPane1" pref="431" max="32767" attributes="0"/>
+                                              <Component id="jScrollPane1" pref="437" max="32767" attributes="0"/>
                                               <Group type="102" attributes="0">
                                                   <Component id="jLabel38" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
@@ -422,10 +418,48 @@
                             <Component class="javax.swing.JTable" name="tb_buscarAnimal">
                               <Properties>
                                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                                  <Table columnCount="0" rowCount="0"/>
+                                  <Table columnCount="6" rowCount="0">
+                                    <Column editable="true" title="Codigo" type="java.lang.Object"/>
+                                    <Column editable="true" title="Nombre" type="java.lang.Object"/>
+                                    <Column editable="true" title="Especie" type="java.lang.Object"/>
+                                    <Column editable="true" title="Sub Eespecie" type="java.lang.Object"/>
+                                    <Column editable="true" title="Continente" type="java.lang.Object"/>
+                                    <Column editable="true" title="Pais" type="java.lang.Object"/>
+                                  </Table>
                                 </Property>
                                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
-                                  <TableColumnModel selectionModel="0"/>
+                                  <TableColumnModel selectionModel="0">
+                                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                      <Title/>
+                                      <Editor/>
+                                      <Renderer/>
+                                    </Column>
+                                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                      <Title/>
+                                      <Editor/>
+                                      <Renderer/>
+                                    </Column>
+                                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                      <Title/>
+                                      <Editor/>
+                                      <Renderer/>
+                                    </Column>
+                                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                      <Title/>
+                                      <Editor/>
+                                      <Renderer/>
+                                    </Column>
+                                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                      <Title/>
+                                      <Editor/>
+                                      <Renderer/>
+                                    </Column>
+                                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                      <Title/>
+                                      <Editor/>
+                                      <Renderer/>
+                                    </Column>
+                                  </TableColumnModel>
                                 </Property>
                                 <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                                   <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
@@ -470,19 +504,19 @@
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                                  <Component id="jLabel41" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <Component id="jLabel40" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="tf_buscarAnimal_nombre" pref="137" max="32767" attributes="0"/>
-                                                          <Component id="tf_buscarAnimal_especie" max="32767" attributes="0"/>
-                                                      </Group>
+                                              <Component id="jLabel41" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jLabel40" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel42" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="cb_buscarAnimal_pais" alignment="1" min="-2" pref="133" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="tf_buscarAnimal_nombre" pref="137" max="32767" attributes="0"/>
+                                                      <Component id="tf_buscarAnimal_especie" max="32767" attributes="0"/>
+                                                      <Component id="tf_buscarAnimal_pais" max="32767" attributes="0"/>
+                                                  </Group>
                                               </Group>
-                                              <Component id="jLabel42" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
@@ -502,9 +536,9 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="jLabel47" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jRadioButton8" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rb_buscarAnimal_si" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="jRadioButton7" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rb_buscarAnimal_no" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -542,7 +576,7 @@
                                           <Component id="bt_EliminarAnimal" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="0" pref="28" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="34" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -572,10 +606,10 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel42" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="cb_buscarAnimal_pais" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel47" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rb_buscarAnimal_si" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rb_buscarAnimal_no" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="tf_buscarAnimal_pais" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -596,7 +630,7 @@
                                       <Component id="jButton9" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="bt_EliminarAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace pref="30" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -631,21 +665,6 @@
                             <Property name="text" type="java.lang.String" value="Pais"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JComboBox" name="cb_buscarAnimal_pais">
-                          <Properties>
-                            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="4">
-                                <StringItem index="0" value="Item 1"/>
-                                <StringItem index="1" value="Item 2"/>
-                                <StringItem index="2" value="Item 3"/>
-                                <StringItem index="3" value="Item 4"/>
-                              </StringArray>
-                            </Property>
-                          </Properties>
-                          <AuxValues>
-                            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                          </AuxValues>
-                        </Component>
                         <Component class="javax.swing.JLabel" name="jLabel43">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Madre"/>
@@ -659,6 +678,9 @@
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="tf_buscarAnimal_veterinario">
+                          <Properties>
+                            <Property name="enabled" type="boolean" value="false"/>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel45">
                           <Properties>
@@ -679,7 +701,7 @@
                         </Component>
                         <Component class="javax.swing.JTextField" name="tf_buscarAnimal_padre">
                         </Component>
-                        <Component class="javax.swing.JRadioButton" name="jRadioButton7">
+                        <Component class="javax.swing.JRadioButton" name="rb_buscarAnimal_no">
                           <Properties>
                             <Property name="model" type="javax.swing.ButtonModel" editor="org.netbeans.modules.form.ComponentChooserEditor">
                               <ComponentRef name="default"/>
@@ -690,7 +712,7 @@
                             <Property name="text" type="java.lang.String" value="NO"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JRadioButton" name="jRadioButton8">
+                        <Component class="javax.swing.JRadioButton" name="rb_buscarAnimal_si">
                           <Properties>
                             <Property name="model" type="javax.swing.ButtonModel" editor="org.netbeans.modules.form.ComponentChooserEditor">
                               <ComponentRef name="default"/>
@@ -740,6 +762,9 @@
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Guardar Cambio"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton9MouseClicked"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JButton" name="bt_EliminarAnimal">
                           <Properties>
@@ -756,6 +781,8 @@
                           <Events>
                             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="bt_buscarAnimal2MouseClicked"/>
                           </Events>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="tf_buscarAnimal_pais">
                         </Component>
                       </SubComponents>
                     </Container>

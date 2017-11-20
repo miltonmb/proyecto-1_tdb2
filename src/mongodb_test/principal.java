@@ -5,7 +5,7 @@ import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
-import javax.swing.DefaultComboBoxModel;
+import com.mongodb.client.model.Updates;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.YES_NO_OPTION;
@@ -53,7 +53,6 @@ public class principal extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         cb_addAnimal_continente = new javax.swing.JComboBox<>();
         jLabel10 = new javax.swing.JLabel();
-        cb_addAnimal_pais = new javax.swing.JComboBox<>();
         jLabel11 = new javax.swing.JLabel();
         rb_addAnimal_si = new javax.swing.JRadioButton();
         rb_addAnimal_no = new javax.swing.JRadioButton();
@@ -66,6 +65,7 @@ public class principal extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         tf_addAnimal_veterinario = new javax.swing.JTextField();
         addAnimal = new javax.swing.JButton();
+        tf_addAnimal_pais = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel5 = new javax.swing.JPanel();
@@ -84,7 +84,6 @@ public class principal extends javax.swing.JFrame {
         jLabel41 = new javax.swing.JLabel();
         tf_buscarAnimal_nombre = new javax.swing.JTextField();
         jLabel42 = new javax.swing.JLabel();
-        cb_buscarAnimal_pais = new javax.swing.JComboBox<>();
         jLabel43 = new javax.swing.JLabel();
         tf_buscarAnimal_madre = new javax.swing.JTextField();
         jLabel44 = new javax.swing.JLabel();
@@ -93,8 +92,8 @@ public class principal extends javax.swing.JFrame {
         sp_buscarAnimal_edad = new javax.swing.JSpinner();
         jLabel46 = new javax.swing.JLabel();
         tf_buscarAnimal_padre = new javax.swing.JTextField();
-        jRadioButton7 = new javax.swing.JRadioButton();
-        jRadioButton8 = new javax.swing.JRadioButton();
+        rb_buscarAnimal_no = new javax.swing.JRadioButton();
+        rb_buscarAnimal_si = new javax.swing.JRadioButton();
         jLabel47 = new javax.swing.JLabel();
         jLabel48 = new javax.swing.JLabel();
         tf_buscarAnimal_subespecie = new javax.swing.JTextField();
@@ -103,6 +102,7 @@ public class principal extends javax.swing.JFrame {
         jButton9 = new javax.swing.JButton();
         bt_EliminarAnimal = new javax.swing.JButton();
         bt_buscarAnimal2 = new javax.swing.JButton();
+        tf_buscarAnimal_pais = new javax.swing.JTextField();
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
         jd_modificarAnimales = new javax.swing.JDialog();
@@ -165,9 +165,9 @@ public class principal extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         bt_entrarZoologico = new javax.swing.JButton();
 
-        jLabel5.setText("Especie");
+        jLabel5.setText("Cod Especie");
 
-        jLabel6.setText("Sub Especie");
+        jLabel6.setText("Cod Sub Especie");
 
         jLabel7.setText("Nombre");
 
@@ -182,10 +182,13 @@ public class principal extends javax.swing.JFrame {
         jLabel9.setText("Continente");
 
         cb_addAnimal_continente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "América", "Asia", "África", "Antártida", "Europa", "Oceanía", "Zelandia" }));
+        cb_addAnimal_continente.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cb_addAnimal_continenteItemStateChanged(evt);
+            }
+        });
 
         jLabel10.setText("Pais");
-
-        cb_addAnimal_pais.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "honduras" }));
 
         jLabel11.setText("Nacio en Cautiverio");
 
@@ -203,7 +206,7 @@ public class principal extends javax.swing.JFrame {
 
         jLabel14.setText("Nombre del padre");
 
-        jLabel15.setText("Veterinario");
+        jLabel15.setText("Cod Veterinario");
 
         addAnimal.setText("Agregar");
         addAnimal.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -221,19 +224,16 @@ public class principal extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(jLabel13)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(tf_addAnimal_madre))
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jLabel10)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(cb_addAnimal_pais, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(tf_addAnimal_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jLabel10)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(jLabel15)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(tf_addAnimal_veterinario)))
+                                    .addComponent(tf_addAnimal_veterinario, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -254,10 +254,13 @@ public class principal extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(jLabel5)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(tf_addAnimal_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(tf_addAnimal_especie, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(tf_addAnimal_especie, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGap(62, 62, 62)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(tf_addAnimal_nombre)
+                                        .addComponent(tf_addAnimal_pais, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE))))
+                            .addGap(33, 33, 33)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(jLabel11)
@@ -269,7 +272,8 @@ public class principal extends javax.swing.JFrame {
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabel6)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(tf_addAnimal_subEspecie, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(tf_addAnimal_subEspecie, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(134, 134, 134))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabel9)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -291,18 +295,19 @@ public class principal extends javax.swing.JFrame {
                     .addComponent(tf_addAnimal_subEspecie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf_addAnimal_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel9)
-                    .addComponent(cb_addAnimal_continente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel7)
+                        .addComponent(jLabel9)
+                        .addComponent(cb_addAnimal_continente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tf_addAnimal_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-                    .addComponent(cb_addAnimal_pais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11)
                     .addComponent(rb_addAnimal_si)
-                    .addComponent(rb_addAnimal_no))
+                    .addComponent(rb_addAnimal_no)
+                    .addComponent(tf_addAnimal_pais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
@@ -338,7 +343,7 @@ public class principal extends javax.swing.JFrame {
 
             },
             new String [] {
-
+                "Codigo", "Nombre", "Especie", "Sub Eespecie", "Continente", "Pais"
             }
         ));
         jScrollPane1.setViewportView(tb_buscarAnimal);
@@ -362,7 +367,7 @@ public class principal extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 431, Short.MAX_VALUE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 437, Short.MAX_VALUE)
                             .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addComponent(jLabel38)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -405,11 +410,11 @@ public class principal extends javax.swing.JFrame {
 
         jLabel42.setText("Pais");
 
-        cb_buscarAnimal_pais.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         jLabel43.setText("Madre");
 
         jLabel44.setText("Veterinario");
+
+        tf_buscarAnimal_veterinario.setEnabled(false);
 
         jLabel45.setText("Edad");
 
@@ -417,11 +422,11 @@ public class principal extends javax.swing.JFrame {
 
         jLabel46.setText("Padre");
 
-        buttonGroup2.add(jRadioButton7);
-        jRadioButton7.setText("NO");
+        buttonGroup2.add(rb_buscarAnimal_no);
+        rb_buscarAnimal_no.setText("NO");
 
-        buttonGroup2.add(jRadioButton8);
-        jRadioButton8.setText("SI");
+        buttonGroup2.add(rb_buscarAnimal_si);
+        rb_buscarAnimal_si.setText("SI");
 
         jLabel47.setText("Cautiverio");
 
@@ -432,6 +437,11 @@ public class principal extends javax.swing.JFrame {
         jLabel49.setText("Continente");
 
         jButton9.setText("Guardar Cambio");
+        jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton9MouseClicked(evt);
+            }
+        });
 
         bt_EliminarAnimal.setText("Eliminar");
         bt_EliminarAnimal.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -462,16 +472,16 @@ public class principal extends javax.swing.JFrame {
                         .addComponent(bt_buscarAnimal2))
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel41)
-                                .addGroup(jPanel6Layout.createSequentialGroup()
+                            .addComponent(jLabel41)
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel40)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(tf_buscarAnimal_nombre, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
-                                        .addComponent(tf_buscarAnimal_especie)))
-                                .addComponent(cb_buscarAnimal_pais, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel42))
+                                    .addComponent(jLabel42))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(tf_buscarAnimal_nombre, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
+                                    .addComponent(tf_buscarAnimal_especie)
+                                    .addComponent(tf_buscarAnimal_pais))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -487,9 +497,9 @@ public class principal extends javax.swing.JFrame {
                             .addGroup(jPanel6Layout.createSequentialGroup()
                                 .addComponent(jLabel47)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton8)
+                                .addComponent(rb_buscarAnimal_si)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jRadioButton7))))
+                                .addComponent(rb_buscarAnimal_no))))
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel6Layout.createSequentialGroup()
@@ -515,7 +525,7 @@ public class principal extends javax.swing.JFrame {
                         .addComponent(jButton9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(bt_EliminarAnimal)))
-                .addGap(0, 28, Short.MAX_VALUE))
+                .addGap(0, 34, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -540,10 +550,10 @@ public class principal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel42)
-                    .addComponent(cb_buscarAnimal_pais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel47)
-                    .addComponent(jRadioButton8)
-                    .addComponent(jRadioButton7))
+                    .addComponent(rb_buscarAnimal_si)
+                    .addComponent(rb_buscarAnimal_no)
+                    .addComponent(tf_buscarAnimal_pais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel43)
@@ -560,7 +570,7 @@ public class principal extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton9)
                     .addComponent(bt_EliminarAnimal))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Por Identificador", jPanel6);
@@ -1043,12 +1053,12 @@ public class principal extends javax.swing.JFrame {
         MongoClient zoo = new MongoClient(uri);
         MongoDatabase db = zoo.getDatabase(uri.getDatabase());
         Document doc = new Document();
-        doc.append("Codigo", this.tf_addAnimal_codigo.getText());
-        doc.append("Especie", this.tf_addAnimal_especie.getText());
-        doc.append("SubEspecie", this.tf_addAnimal_subEspecie.getText());
+        doc.append("CodigoAnimal", Integer.parseInt(this.tf_addAnimal_codigo.getText()));
+        doc.append("CodigoEspecie", Integer.parseInt(this.tf_addAnimal_especie.getText()));
+        doc.append("CodigoSubEspecie", Integer.parseInt(this.tf_addAnimal_subEspecie.getText()));
         doc.append("Nombre", this.tf_addAnimal_nombre.getText());
         doc.append("Continente", this.cb_addAnimal_continente.getSelectedItem().toString());
-        doc.append("Pais", this.cb_addAnimal_pais.getSelectedItem().toString());
+        doc.append("Pais", this.tf_addAnimal_pais.getText());
         doc.append("Nombre_Madre", this.tf_addAnimal_madre.getText());
         doc.append("Nombre_Padre", this.tf_addAnimal_padre.getText());
         if (this.rb_addAnimal_si.isSelected()) {
@@ -1056,7 +1066,7 @@ public class principal extends javax.swing.JFrame {
         } else {
             doc.append("Cautiverio", "NO");
         }
-        doc.append("Veterinario", this.tf_addAnimal_veterinario.getText());
+        doc.append("CodigoVeterinario", Integer.parseInt(this.tf_addAnimal_veterinario.getText()));
         doc.append("Edad", this.sp_addAnimal_edad.getValue());
         db.getCollection("Animales").insertOne(doc);
         JOptionPane.showMessageDialog(this, "Agregado con Exito");
@@ -1068,7 +1078,7 @@ public class principal extends javax.swing.JFrame {
         this.tf_addAnimal_padre.setText("");
         this.tf_addAnimal_veterinario.setText("");
         this.cb_addAnimal_continente.setSelectedIndex(1);
-        this.cb_addAnimal_pais.setModel(new DefaultComboBoxModel());
+        this.tf_addAnimal_pais.setText("");
         this.rb_addAnimal_no.setSelected(false);
         this.sp_addAnimal_edad.setValue(0);
     }//GEN-LAST:event_addAnimalMouseClicked
@@ -1080,13 +1090,18 @@ public class principal extends javax.swing.JFrame {
 
     private void bt_buscarAnimalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_buscarAnimalMouseClicked
         // TODO add your handling code here:
-        DefaultTableModel modelo=new DefaultTableModel();
+        DefaultTableModel modelo = (DefaultTableModel) this.tb_buscarAnimal.getModel();
+        modelo.setRowCount(0);
         MongoClientURI uri = new MongoClientURI("mongodb://admin:admin@ds044709.mlab.com:44709/proyectoz");
         MongoClient zoo = new MongoClient(uri);
         MongoDatabase db = zoo.getDatabase(uri.getDatabase());
         BasicDBObject query = new BasicDBObject();
-        query.put("Especie", this.tf_buscarAnimal1_especie.getSelectedText());
-                    System.out.println(db.getCollection("Animales").find(query).toString());
+        query.put("CodigoEspecie", this.tf_buscarAnimal1_especie.getSelectedText());
+        Document doc = db.getCollection("Animales").find(query).first();
+        System.out.println(doc.toString());
+//        Object[] a={doc.get("Codigo"),doc.get("Nombre"),doc.get("Especie"),doc.get("SubEspecie"),doc.get("Continente"),doc.get("Pais")};
+        //      modelo.addRow(a);
+        this.tb_buscarAnimal.setModel(modelo);
     }//GEN-LAST:event_bt_buscarAnimalMouseClicked
 
     private void bt_buscarAnimal2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_buscarAnimal2MouseClicked
@@ -1095,8 +1110,22 @@ public class principal extends javax.swing.JFrame {
         MongoClient zoo = new MongoClient(uri);
         MongoDatabase db = zoo.getDatabase(uri.getDatabase());
         BasicDBObject query = new BasicDBObject();
-        query.put("Codigo", this.tf_buscarAnimal_codigo.getSelectedText());
-                    System.out.println(db.getCollection("Animales").find(query));
+        query.put("CodigoAnimal", Integer.parseInt(this.tf_buscarAnimal_codigo.getText()));
+        Document doc = db.getCollection("Animales").find(query).first();
+        this.tf_buscarAnimal_especie.setText(doc.get("CodigoEspecie").toString());
+        this.tf_buscarAnimal_subespecie.setText(doc.get("CodigoSubEspecie").toString());
+        this.tf_buscarAnimal_nombre.setText(doc.get("Nombre").toString());
+        this.tf_buscarAnimal_madre.setText(doc.get("Nombre_Madre").toString());
+        this.tf_buscarAnimal_padre.setText(doc.get("Nombre_Padre").toString());
+        this.tf_buscarAnimal_veterinario.setText(doc.get("CodigoVeterinario").toString());
+        this.cb_buscarAnimal_continente.setSelectedItem(doc.get("Continente"));
+        this.tf_buscarAnimal_pais.setText(doc.get("Pais").toString());
+        this.sp_buscarAnimal_edad.setValue(doc.get("Edad"));
+        if (doc.get("Cautiverio").toString().equals("SI")) {
+            this.rb_buscarAnimal_si.setSelected(true);
+        } else {
+            this.rb_buscarAnimal_no.setSelected(true);
+        }
     }//GEN-LAST:event_bt_buscarAnimal2MouseClicked
 
     private void bt_EliminarAnimalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_EliminarAnimalMouseClicked
@@ -1105,15 +1134,42 @@ public class principal extends javax.swing.JFrame {
         MongoClient zoo = new MongoClient(uri);
         MongoDatabase db = zoo.getDatabase(uri.getDatabase());
         int opcion;
-         try {
-             opcion = JOptionPane.showConfirmDialog(this.jd_animales, "¿Desea Borrarlo?", "Borrar", YES_NO_OPTION);
-             if (opcion == 0) {
-                 db.getCollection("Animales").deleteOne(Filters.eq("Codigo", this.tf_buscarAnimal_codigo.getText()));
-                 JOptionPane.showMessageDialog(this.jd_animales, "Eliminado!");
-             }
-         } catch (Exception e) {
-         }
+        try {
+            opcion = JOptionPane.showConfirmDialog(this.jd_animales, "¿Desea Borrarlo?", "Borrar", YES_NO_OPTION);
+            if (opcion == 0) {
+                db.getCollection("Animales").deleteOne(Filters.eq("CodigoAnimal", this.tf_buscarAnimal_codigo.getText()));
+                JOptionPane.showMessageDialog(this.jd_animales, "Eliminado!");
+            }
+        } catch (Exception e) {
+        }
     }//GEN-LAST:event_bt_EliminarAnimalMouseClicked
+
+    private void cb_addAnimal_continenteItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_addAnimal_continenteItemStateChanged
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_cb_addAnimal_continenteItemStateChanged
+
+    private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
+        // TODO add your handling code here:
+        MongoClientURI uri = new MongoClientURI("mongodb://admin:admin@ds044709.mlab.com:44709/proyectoz");
+        MongoClient zoo = new MongoClient(uri);
+        MongoDatabase db = zoo.getDatabase(uri.getDatabase());
+        int codigo= Integer.parseInt(this.tf_buscarAnimal_codigo.getText());
+        db.getCollection("Animales").updateOne(Filters.eq("CodigoAnimal", codigo), Updates.set("CodigoEspecie", Integer.parseInt(this.tf_buscarAnimal_especie.getText())));
+        db.getCollection("Animales").updateOne(Filters.eq("CodigoAnimal", codigo), Updates.set("Nombre", this.tf_buscarAnimal_nombre.getText()));
+        db.getCollection("Animales").updateOne(Filters.eq("CodigoAnimal", codigo), Updates.set("CodigoSubEspecie", Integer.parseInt(this.tf_buscarAnimal_subespecie.getText())));
+        db.getCollection("Animales").updateOne(Filters.eq("CodigoAnimal", codigo), Updates.set("Continente", this.cb_buscarAnimal_continente.getSelectedItem().toString()));
+        db.getCollection("Animales").updateOne(Filters.eq("CodigoAnimal", codigo), Updates.set("Pais", this.tf_buscarAnimal_pais.getText()));
+        db.getCollection("Animales").updateOne(Filters.eq("CodigoAnimal", codigo), Updates.set("Edad", this.sp_buscarAnimal_edad.getValue()));
+        db.getCollection("Animales").updateOne(Filters.eq("CodigoAnimal", codigo), Updates.set("Nombre_Madre", this.tf_buscarAnimal_madre.getText()));
+        db.getCollection("Animales").updateOne(Filters.eq("CodigoAnimal", codigo), Updates.set("Nombre_Padre", this.tf_buscarAnimal_padre.getText()));
+        if (this.rb_buscarAnimal_si.isSelected()) {
+            db.getCollection("Animales").updateOne(Filters.eq("CodigoAnimal", codigo), Updates.set("Cautiverio","SI" ));
+        }else{
+            db.getCollection("Animales").updateOne(Filters.eq("CodigoAnimal", codigo), Updates.set("Cautiverio","NO" ));
+        }
+        JOptionPane.showMessageDialog(this.jd_animales, "Modificado Exitosamente!");
+    }//GEN-LAST:event_jButton9MouseClicked
     public void dialog(JDialog a) {
         a.setModal(true);
         a.pack();
@@ -1167,9 +1223,7 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JComboBox<String> cb_addAnimal_continente;
-    private javax.swing.JComboBox<String> cb_addAnimal_pais;
     private javax.swing.JComboBox<String> cb_buscarAnimal_continente;
-    private javax.swing.JComboBox<String> cb_buscarAnimal_pais;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton7;
@@ -1235,8 +1289,6 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton10;
     private javax.swing.JRadioButton jRadioButton11;
     private javax.swing.JRadioButton jRadioButton12;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
     private javax.swing.JRadioButton jRadioButton9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSpinner jSpinner5;
@@ -1264,6 +1316,8 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JDialog jd_modificarAnimales;
     private javax.swing.JRadioButton rb_addAnimal_no;
     private javax.swing.JRadioButton rb_addAnimal_si;
+    private javax.swing.JRadioButton rb_buscarAnimal_no;
+    private javax.swing.JRadioButton rb_buscarAnimal_si;
     private javax.swing.JSpinner sp_addAnimal_edad;
     private javax.swing.JSpinner sp_buscarAnimal_edad;
     private javax.swing.JTable tb_buscarAnimal;
@@ -1272,6 +1326,7 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JTextField tf_addAnimal_madre;
     private javax.swing.JTextField tf_addAnimal_nombre;
     private javax.swing.JTextField tf_addAnimal_padre;
+    private javax.swing.JTextField tf_addAnimal_pais;
     private javax.swing.JTextField tf_addAnimal_subEspecie;
     private javax.swing.JTextField tf_addAnimal_veterinario;
     private javax.swing.JTextField tf_buscarAnimal1_especie;
@@ -1280,6 +1335,7 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JTextField tf_buscarAnimal_madre;
     private javax.swing.JTextField tf_buscarAnimal_nombre;
     private javax.swing.JTextField tf_buscarAnimal_padre;
+    private javax.swing.JTextField tf_buscarAnimal_pais;
     private javax.swing.JTextField tf_buscarAnimal_subespecie;
     private javax.swing.JTextField tf_buscarAnimal_veterinario;
     // End of variables declaration//GEN-END:variables
