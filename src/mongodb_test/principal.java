@@ -150,6 +150,14 @@ public class principal extends javax.swing.JFrame {
         jPanel10 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         tb_enfermedades = new javax.swing.JTable();
+        jPanel11 = new javax.swing.JPanel();
+        jLabel27 = new javax.swing.JLabel();
+        cb_animal = new javax.swing.JComboBox<>();
+        jLabel31 = new javax.swing.JLabel();
+        lb_animal = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        tb_descendientes = new javax.swing.JTable();
+        jLabel33 = new javax.swing.JLabel();
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
         jLabel23 = new javax.swing.JLabel();
@@ -387,7 +395,7 @@ public class principal extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 515, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 460, Short.MAX_VALUE)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel5Layout.createSequentialGroup()
@@ -554,7 +562,7 @@ public class principal extends javax.swing.JFrame {
                         .addComponent(jButton9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(bt_EliminarAnimal)))
-                .addGap(0, 112, Short.MAX_VALUE))
+                .addGap(0, 57, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -676,7 +684,7 @@ public class principal extends javax.swing.JFrame {
                                         .addComponent(jLabel19)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(tf_agregarEspecie_nombreEspecie, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel16)
@@ -789,7 +797,7 @@ public class principal extends javax.swing.JFrame {
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 556, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 501, Short.MAX_VALUE)
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addComponent(lb_especies)
                         .addGap(0, 0, Short.MAX_VALUE))
@@ -908,7 +916,7 @@ public class principal extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(cb_enfermedad_estado, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jButton7))
-                .addContainerGap(168, Short.MAX_VALUE))
+                .addContainerGap(113, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -960,7 +968,7 @@ public class principal extends javax.swing.JFrame {
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 559, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel10Layout.setVerticalGroup(
@@ -988,17 +996,90 @@ public class principal extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Enfermedades", jPanel7);
 
+        jPanel11.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                jPanel11ComponentShown(evt);
+            }
+        });
+
+        jLabel27.setText("Codigo del animal");
+
+        cb_animal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cb_animalMouseClicked(evt);
+            }
+        });
+
+        jLabel31.setText("Nombre del animal");
+
+        lb_animal.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        lb_animal.setText("--------");
+
+        tb_descendientes.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane5.setViewportView(tb_descendientes);
+
+        jLabel33.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel33.setText("descendientes");
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 471, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addComponent(jLabel27)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cb_animal, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(45, 45, 45)
+                        .addComponent(jLabel31)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lb_animal, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel33))
+                .addContainerGap(100, Short.MAX_VALUE))
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel27)
+                    .addComponent(cb_animal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel31)
+                    .addComponent(lb_animal))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel33)
+                .addGap(4, 4, 4)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(87, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("descendencia", jPanel11);
+
         javax.swing.GroupLayout jd_animalesLayout = new javax.swing.GroupLayout(jd_animales.getContentPane());
         jd_animales.getContentPane().setLayout(jd_animalesLayout);
         jd_animalesLayout.setHorizontalGroup(
             jd_animalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jd_animalesLayout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jTabbedPane1)
                 .addContainerGap())
         );
         jd_animalesLayout.setVerticalGroup(
             jd_animalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 305, Short.MAX_VALUE)
+            .addGroup(jd_animalesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 305, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jLabel23.setText("jLabel23");
@@ -1085,34 +1166,42 @@ public class principal extends javax.swing.JFrame {
         MongoClient zoo = new MongoClient(uri);
         MongoDatabase db = zoo.getDatabase(uri.getDatabase());
         Document doc = new Document();
-        doc.append("CodigoAnimal", Integer.parseInt(this.tf_addAnimal_codigo.getText()));
-        doc.append("CodigoEspecie", Integer.parseInt(this.cb_addAnimal_especie.getSelectedItem().toString()));
-        doc.append("CodigoSubEspecie", Integer.parseInt(this.cb_addAnimal_subEspecie.getSelectedItem().toString()));
-        doc.append("Nombre", this.tf_addAnimal_nombre.getText());
-        doc.append("Continente", this.cb_addAnimal_continente.getSelectedItem().toString());
-        doc.append("Pais", this.tf_addAnimal_pais.getText());
-        doc.append("Nombre_Madre", this.tf_addAnimal_madre.getText());
-        doc.append("Nombre_Padre", this.tf_addAnimal_padre.getText());
-        if (this.rb_addAnimal_si.isSelected()) {
-            doc.append("Cautiverio", "SI");
-        } else {
-            doc.append("Cautiverio", "NO");
+        BasicDBObject query = new BasicDBObject();
+        query.put("CodigoAnimal", this.tf_enfermedad.getText());
+        Document doc2 = db.getCollection("Animales").find(query).first();
+        if (doc2 == null) {
+            doc.append("CodigoAnimal", Integer.parseInt(this.tf_addAnimal_codigo.getText()));
+            doc.append("CodigoEspecie", Integer.parseInt(this.cb_addAnimal_especie.getSelectedItem().toString()));
+            doc.append("CodigoSubEspecie", Integer.parseInt(this.cb_addAnimal_subEspecie.getSelectedItem().toString()));
+            doc.append("Nombre", this.tf_addAnimal_nombre.getText());
+            doc.append("Continente", this.cb_addAnimal_continente.getSelectedItem().toString());
+            doc.append("Pais", this.tf_addAnimal_pais.getText());
+            doc.append("Nombre_Madre", this.tf_addAnimal_madre.getText());
+            doc.append("Nombre_Padre", this.tf_addAnimal_padre.getText());
+            if (this.rb_addAnimal_si.isSelected()) {
+                doc.append("Cautiverio", "SI");
+            } else {
+                doc.append("Cautiverio", "NO");
+            }
+            doc.append("CodigoVeterinario", Integer.parseInt(this.tf_addAnimal_veterinario.getText()));
+            doc.append("Edad", this.sp_addAnimal_edad.getValue());
+            db.getCollection("Animales").insertOne(doc);
+            JOptionPane.showMessageDialog(this, "Agregado con Exito");
+            this.tf_addAnimal_codigo.setText("");
+            this.cb_addAnimal_especie.setSelectedIndex(1);
+            this.cb_addAnimal_subEspecie.setSelectedIndex(1);
+            this.tf_addAnimal_nombre.setText("");
+            this.tf_addAnimal_madre.setText("");
+            this.tf_addAnimal_padre.setText("");
+            this.tf_addAnimal_veterinario.setText("");
+            this.cb_addAnimal_continente.setSelectedIndex(1);
+            this.tf_addAnimal_pais.setText("");
+            this.rb_addAnimal_no.setSelected(false);
+            this.sp_addAnimal_edad.setValue(0);
+        }else{
+            JOptionPane.showMessageDialog(this, "El codigo ya existe");
         }
-        doc.append("CodigoVeterinario", Integer.parseInt(this.tf_addAnimal_veterinario.getText()));
-        doc.append("Edad", this.sp_addAnimal_edad.getValue());
-        db.getCollection("Animales").insertOne(doc);
-        JOptionPane.showMessageDialog(this, "Agregado con Exito");
-        this.tf_addAnimal_codigo.setText("");
-        this.cb_addAnimal_especie.setSelectedIndex(1);
-        this.cb_addAnimal_subEspecie.setSelectedIndex(1);
-        this.tf_addAnimal_nombre.setText("");
-        this.tf_addAnimal_madre.setText("");
-        this.tf_addAnimal_padre.setText("");
-        this.tf_addAnimal_veterinario.setText("");
-        this.cb_addAnimal_continente.setSelectedIndex(1);
-        this.tf_addAnimal_pais.setText("");
-        this.rb_addAnimal_no.setSelected(false);
-        this.sp_addAnimal_edad.setValue(0);
+
     }//GEN-LAST:event_addAnimalMouseClicked
 
     private void bt_entrarAnimalesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_entrarAnimalesMouseClicked
@@ -1515,12 +1604,68 @@ public class principal extends javax.swing.JFrame {
         iterable.forEach(new Block<Document>() {
             @Override
             public void apply(final Document doc) {
-                Object[] a = {doc.get("CodigoAnimal"), doc.get("NombreEnfermedad"),doc.get("Tratamiento"),doc.get("Estado")};
+                Object[] a = {doc.get("CodigoAnimal"), doc.get("NombreEnfermedad"), doc.get("Tratamiento"), doc.get("Estado")};
                 modelo.addRow(a);
             }
         });
         this.tb_enfermedades.setModel(modelo);
     }//GEN-LAST:event_jPanel10ComponentShown
+
+    private void jPanel11ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanel11ComponentShown
+        // TODO add your handling code here:
+        MongoClientURI uri = new MongoClientURI("mongodb://admin:admin@ds044709.mlab.com:44709/proyectoz");
+        MongoClient zoo = new MongoClient(uri);
+        MongoDatabase db = zoo.getDatabase(uri.getDatabase());
+        DefaultComboBoxModel modelo = new DefaultComboBoxModel();
+        FindIterable<Document> iterable = db.getCollection("Animales").find();
+        iterable.forEach(new Block<Document>() {
+            @Override
+            public void apply(final Document document) {
+                modelo.addElement(document.get("CodigoAnimal"));
+            }
+        });
+        this.cb_animal.setModel(modelo);
+    }//GEN-LAST:event_jPanel11ComponentShown
+
+    private void cb_animalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cb_animalMouseClicked
+        // TODO add your handling code here:
+        MongoClientURI uri = new MongoClientURI("mongodb://admin:admin@ds044709.mlab.com:44709/proyectoz");
+        MongoClient zoo = new MongoClient(uri);
+        MongoDatabase db = zoo.getDatabase(uri.getDatabase());
+        BasicDBObject query = new BasicDBObject();
+        query.put("CodigoAnimal", Integer.parseInt(this.cb_animal.getSelectedItem().toString()));
+        DefaultComboBoxModel modelo = new DefaultComboBoxModel();
+        Document doc = db.getCollection("Animales").find(query).first();
+        this.lb_animal.setText(doc.get("Nombre") + "");
+
+        DefaultTableModel tabla = new DefaultTableModel();
+        tabla.addColumn("Codigo");
+        tabla.addColumn("Nombre");
+        tabla.addColumn("Especie");
+        tabla.addColumn("Sub Especie");
+        tabla.addColumn("Continente");
+        tabla.addColumn("Pais");
+
+        query.put("Nombre_Madre", this.lb_animal.getText());
+        FindIterable<Document> iterable = db.getCollection("Animales").find(query);
+        iterable.forEach(new Block<Document>() {
+            @Override
+            public void apply(final Document doc) {
+                Object[] a = {doc.get("CodigoAnimal"), doc.get("Nombre"), doc.get("CodigoEspecie"), doc.get("CodigoSubEspecie"), doc.get("Continente"), doc.get("Pais")};
+                tabla.addRow(a);
+            }
+        });
+        query.put("Nombre_Padre", this.lb_animal.getText());
+        FindIterable<Document> iterable2 = db.getCollection("Animales").find(query);
+        iterable2.forEach(new Block<Document>() {
+            @Override
+            public void apply(final Document doc) {
+                Object[] a = {doc.get("CodigoAnimal"), doc.get("Nombre"), doc.get("CodigoEspecie"), doc.get("CodigoSubEspecie"), doc.get("Continente"), doc.get("Pais")};
+                tabla.addRow(a);
+            }
+        });
+        this.tb_descendientes.setModel(tabla);
+    }//GEN-LAST:event_cb_animalMouseClicked
     public void dialog(JDialog a) {
         a.setModal(true);
         a.pack();
@@ -1577,6 +1722,7 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cb_addAnimal_especie;
     private javax.swing.JComboBox<String> cb_addAnimal_subEspecie;
     private javax.swing.JComboBox<String> cb_agregarEspecie_codEspecie;
+    private javax.swing.JComboBox<String> cb_animal;
     private javax.swing.JComboBox<String> cb_buscarAnimal1_especie;
     private javax.swing.JComboBox<String> cb_buscarAnimal1_subespecie;
     private javax.swing.JComboBox<String> cb_buscarAnimal_continente;
@@ -1609,10 +1755,13 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
@@ -1633,6 +1782,7 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -1645,12 +1795,14 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
     private javax.swing.JDialog jd_animales;
+    private javax.swing.JLabel lb_animal;
     private javax.swing.JLabel lb_enfermedad_nombre;
     private javax.swing.JLabel lb_especies;
     private javax.swing.JRadioButton rb_addAnimal_no;
@@ -1661,6 +1813,7 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JSpinner sp_buscarAnimal_edad;
     private javax.swing.JTextArea ta_enfermedad_tratamiento;
     private javax.swing.JTable tb_buscarAnimal;
+    private javax.swing.JTable tb_descendientes;
     private javax.swing.JTable tb_enfermedades;
     private javax.swing.JTable tb_especies;
     private javax.swing.JTextField tf_addAnimal_codigo;
